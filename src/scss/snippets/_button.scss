@@ -1,0 +1,12 @@
+.button {
+	gap: var(--distance-xs);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-xs);
+	font-weight: var(--font-weight-medium);
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+
+	&::after {
+		box-shadow: none;
+	}
+}

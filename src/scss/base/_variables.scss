@@ -5,14 +5,15 @@ $mq-desktop-large: 'screen and (min-width: 1440px)';
 :root {
 	//REAL COLORS
 	--color-black: #000000;
+	--color-glacier: #88BCC9;
+	--color-carrara: #E7E6E2;
 	--color-white: #FFFFFF;
-	--color-black-50: rgba(0, 0, 0, 0.5);
-	--color-sandy-beach: #FFEEC9;
 
 	//USE CASE COLORS
 	--color-primary: var(--color-black);
-	--color-secondary: var(--color-sandy-beach);
-	--color-tertiary: var(--color-white);
+	--color-secondary: var(--color-glacier);
+	--color-tertiary: var(--color-carrara);
+	--color-quaternary: var(--color-white);
 
 	//FONT FAMILY
 	--font-family-primary: 'Roboto', Arial;
@@ -36,7 +37,8 @@ $mq-desktop-large: 'screen and (min-width: 1440px)';
 	--border-radius: 5px;
 
 	//LETTER SPACING
-	--leter-spacing: 5%;
+	--letter-spacing-s: 0.05em;
+	--letter-spacing-m: 0.1em;
 
 	//DISTANCES
 	--distance-xxs: 6px;

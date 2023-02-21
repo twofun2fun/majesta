@@ -1,0 +1,59 @@
+.hero {
+	position: relative;
+
+	@media #{$mq-desktop-large} {
+		margin: 0 auto;
+		max-width: var(--max-width);
+	}
+
+	&__image {
+		object-fit: cover;
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@media #{$mq-tablet} {
+			max-width: 58.34%; //7 of 12 columns
+		}
+
+		@media #{$mq-desktop} {
+			max-width: 41.67%; //5 of 12 columns
+		}
+
+		@media #{$mq-desktop-large} {
+			left: 8.34%; //1 of 12 columns
+		}
+	}
+
+	&__headline {
+		margin: 0 0 var(--distance-s);
+		font-family: var(--font-family-secondary);
+		font-size: var(--font-size-m);
+		font-weight: var(--font-weight-bold);
+
+		@media #{$mq-tablet} {
+			margin-bottom: var(--distance-m);
+		}
+
+		@media #{$mq-desktop-large} {
+			margin-bottom: var(--distance-l);
+			font-size: var(--font-size-xl);
+		}
+	}
+
+	&__highlight {
+		font-weight: var(--font-weight-black);
+		color: var(--color-secondary);
+	}
+
+	&__button {
+		letter-spacing: var(--letter-spacing-m);
+
+		@media #{$mq-desktop-large} {
+			font-size: var(--font-size-m);
+		}
+	}
+}
