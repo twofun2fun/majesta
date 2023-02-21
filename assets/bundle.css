@@ -76,6 +76,12 @@
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
+.button:not([disabled]):hover::after {
+  box-shadow: none;
+}
+.button:hover {
+  color: var(--color-quaternary);
+}
 .button::after {
   box-shadow: none;
 }

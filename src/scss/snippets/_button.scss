@@ -6,6 +6,18 @@
 	background-color: var(--color-secondary);
 	color: var(--color-primary);
 
+	&:not([disabled]) {
+		&:hover {
+			&::after {
+				box-shadow: none;
+			}
+		}
+	}
+
+	&:hover {
+		color: var(--color-quaternary);
+	}
+
 	&::after {
 		box-shadow: none;
 	}
