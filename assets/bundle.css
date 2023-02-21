@@ -1,0 +1,67 @@
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url(9429985be4f46ec8fcfc.woff2) format("woff2"), url(774f99460b8c31560a3c.woff) format("woff"), url(fc2b5060f7accec5cf74.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url(70ace3870f471997ceb7.woff2) format("woff2"), url(61c265591865cecb1c3d.woff) format("woff"), url(7c8d04cd831df3033c8a.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url(002079d85a6f27587d17.woff2) format("woff2"), url(75a1a5b5582b236e0fe3.woff) format("woff"), url(f80816a5455d171f948d.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-weight: 700;
+  src: url(82dfc9fd178861f422f8.woff2) format("woff2"), url(8c44feabce736773ccc1.woff) format("woff"), url(93cdecc21109a014b86b.ttf) format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-weight: 900;
+  src: url(dd8426ae27306da67b8a.woff2) format("woff2"), url(a2074730955dfd5d97f9.woff) format("woff"), url(2cae369406147e0156db.ttf) format("ttf");
+  font-display: swap;
+}
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-sandy-beach: #FFEEC9;
+  --color-primary: var(--color-black);
+  --color-secondary: var(--color-sandy-beach);
+  --color-tertiary: var(--color-white);
+  --font-family-primary: "Roboto", Arial;
+  --font-family-secondary: "PlayfairDisplay", Georgia;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  --font-size-xxs: 14px;
+  --font-size-xs: 16px;
+  --font-size-s: 20px;
+  --font-size-m: 24px;
+  --font-size-l: 32px;
+  --font-size-xl: 40px;
+  --border-radius: 5px;
+  --leter-spacing: 5%;
+  --distance-xxs: 6px;
+  --distance-xs: 12px;
+  --distance-s: 18px;
+  --distance-m: 24px;
+  --distance-l: 36px;
+  --distance-xl: 48px;
+  --distance-xxl: 72px;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --max-width: 1440px;
+}

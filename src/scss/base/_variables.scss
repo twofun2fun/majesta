@@ -1,0 +1,57 @@
+$mq-tablet: 'screen and (min-width: 768px)';
+$mq-desktop: 'screen and (min-width: 1024px)';
+$mq-desktop-large: 'screen and (min-width: 1440px)';
+
+:root {
+	//REAL COLORS
+	--color-black: #000000;
+	--color-white: #FFFFFF;
+	--color-black-50: rgba(0, 0, 0, 0.5);
+	--color-sandy-beach: #FFEEC9;
+
+	//USE CASE COLORS
+	--color-primary: var(--color-black);
+	--color-secondary: var(--color-sandy-beach);
+	--color-tertiary: var(--color-white);
+
+	//FONT FAMILY
+	--font-family-primary: 'Roboto', Arial;
+	--font-family-secondary: 'PlayfairDisplay', Georgia;
+
+	//FONT WEIGHT
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+	--font-weight-black: 900;
+
+	//FONT SIZE
+	--font-size-xxs: 14px;
+	--font-size-xs: 16px;
+	--font-size-s: 20px;
+	--font-size-m: 24px;
+	--font-size-l: 32px;
+	--font-size-xl: 40px;
+
+	//BORDER RADIUS
+	--border-radius: 5px;
+
+	//LETTER SPACING
+	--leter-spacing: 5%;
+
+	//DISTANCES
+	--distance-xxs: 6px;
+	--distance-xs: 12px;
+	--distance-s: 18px;
+	--distance-m: 24px;
+	--distance-l: 36px;
+	--distance-xl: 48px;
+	--distance-xxl: 72px;
+
+	//Z-INDEX
+	--z-index-1: 1;
+	--z-index-2: 2;
+	--z-index-3: 3;
+
+	//MAX-WIDTH
+	--max-width: 1440px;
+}
