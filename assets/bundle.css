@@ -68,6 +68,10 @@
   --max-width: 1440px;
 }
 
+body {
+  background: var(--color-tertiary);
+}
+
 .button {
   gap: var(--distance-xs);
   font-family: var(--font-family-primary);
@@ -81,6 +85,11 @@
 }
 .button:hover {
   color: var(--color-quaternary);
+}
+.button:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: var(--distance-xxs);
+  box-shadow: none;
 }
 .button::after {
   box-shadow: none;

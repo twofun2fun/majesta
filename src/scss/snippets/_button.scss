@@ -18,6 +18,12 @@
 		color: var(--color-quaternary);
 	}
 
+	&:focus {
+		outline: 2px solid var(--color-secondary);
+		outline-offset: var(--distance-xxs);
+		box-shadow: none;
+	}
+
 	&::after {
 		box-shadow: none;
 	}
