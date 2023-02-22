@@ -1,0 +1,89 @@
+<section class="product-row content-wrapper">
+    {% if section.settings.headline != blank %}
+        <h2 class="product-row__headline headline">
+            {{ section.settings.headline }}
+        </h2>
+    {% endif %}
+    {% if section.blocks != blank %}
+        <div class="product-row__container">
+            {% for block in section.blocks %}
+                <div class="product{% if block.settings.large-product %} product--large {% endif %}">
+                    {% if block.settings.product.featured_image != blank %}
+                        {% render 'image', image: block.settings.product.featured_image, class: "product__image image", sizes: sizes, widths: "374, 400, 600", alt: block.settings.product.featured_image.alt %}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag }}
+                    {% endif %}
+                    <a href="{{ block.settings.product.url }}" class="product__name">{{ block.settings.product.title }}</a>
+                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product__price">{{ block.settings.product.price | money_with_currency }}</span>
+                        <meta itemprop="priceCurrency" content="{{ shop.currency }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="product-row__button button button--nobg">{{ section.settings.button_label }}{% render 'icon-arrow' %}</a>
+    {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Produktreihe",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Das ist eine Überschrift",
+      "label": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Alle Produkte",
+      "label": "Text - Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "URL - Button"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Produkt",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produkt auswählen"
+        },
+        {
+          "type": "checkbox",
+          "id": "large-product",
+          "default": false,
+          "label": "Größeres Produkt"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Produktreihe",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

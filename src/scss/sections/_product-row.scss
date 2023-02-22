@@ -1,0 +1,11 @@
+.product-row {
+	margin-bottom: var(--distance-l);
+	padding-top: var(--distance-l);
+	text-align: center;
+
+	&__headline {
+		margin: 0 0 var(--distance-m);
+		font-family: var(--font-family-secondary);
+		text-transform: uppercase;
+	}
+}
