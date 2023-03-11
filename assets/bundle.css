@@ -169,6 +169,11 @@ body {
   padding: 0 var(--distance-m);
   max-width: var(--max-width);
 }
+@media screen and (min-width: 1024px) {
+  .content-wrapper {
+    padding: 0 var(--distance-xxl);
+  }
+}
 
 .hero {
   position: relative;

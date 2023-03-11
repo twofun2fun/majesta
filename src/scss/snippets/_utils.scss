@@ -2,4 +2,8 @@
 	margin: 0 auto;
 	padding: 0 var(--distance-m);
 	max-width: var(--max-width);
+
+	@media #{$mq-desktop} {
+		padding: 0 var(--distance-xxl);
+	}
 }

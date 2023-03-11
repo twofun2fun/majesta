@@ -1,0 +1,65 @@
+<section class="info-row content-wrapper">
+
+</section>
+
+{% schema %}
+{
+  "name": "Inforeihe",
+  "settings": [],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Kachel",
+      "settings": [
+        {
+          "type": "radio",
+          "id": "icons",
+          "label": "Icon Auswahl",
+          "options": [
+            {
+              "value": "icon-creditcard",
+              "label": "Icon - Kreditkarte"
+            },
+            {
+              "value": "icon-delivery",
+              "label": "Icon - Versand"
+            },
+            {
+              "value": "icon-return",
+              "label": "Icon - Rückgabe"
+            }
+          ],
+          "default": "icon-creditcard"
+        },
+        {
+          "type": "text",
+          "id": "headline",
+          "label": "Überschrift"
+        },
+        {
+          "type": "text",
+          "id": "subline",
+          "label": "Unterüberschrift"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Inforeihe",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
