@@ -30,9 +30,8 @@
 
 	&__headline {
 		margin: 0 0 var(--distance-s);
-		font-family: var(--font-family-secondary);
+		border: none;
 		font-size: var(--font-size-m);
-		font-weight: var(--font-weight-bold);
 
 		@media #{$mq-tablet} {
 			margin-bottom: var(--distance-m);

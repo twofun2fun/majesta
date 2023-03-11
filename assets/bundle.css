@@ -108,6 +108,8 @@ body {
   display: inline-block;
   border: 1px solid var(--color-secondary);
   padding: var(--distance-xs);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-black);
 }
 
 .image {
@@ -202,9 +204,8 @@ body {
 }
 .hero__headline {
   margin: 0 0 var(--distance-s);
-  font-family: var(--font-family-secondary);
+  border: none;
   font-size: var(--font-size-m);
-  font-weight: var(--font-weight-bold);
 }
 @media screen and (min-width: 768px) {
   .hero__headline {
@@ -237,7 +238,6 @@ body {
 }
 .product-row__headline {
   margin: 0 0 var(--distance-m);
-  font-family: var(--font-family-secondary);
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
