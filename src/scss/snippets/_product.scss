@@ -1,10 +1,47 @@
 .product {
+	$component: &;
+
 	position: relative;
 	margin-bottom: var(--distance-s);
+	pointer-events: auto;
+
+	&:hover {
+		#{$component}__image {
+			transform: scale(1.03);
+		}
+	}
+
+	&:focus-within {
+		#{$component}__image {
+			transform: scale(1.03);
+		}
+	}
+
+	@media #{$mq-tablet} {
+		flex: 1;
+		margin-bottom: 0;
+	}
+
+	&--large {
+		@media #{$mq-tablet} {
+			flex: 1.5;
+		}
+	}
+
+	&__image {
+		margin-bottom: var(--distance-xxs);
+		height: auto;
+		transition: transform 0.3s ease-in-out;
+	}
 
 	&__name {
 		text-decoration: none;
 		color: var(--color-primary);
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: none;
+		}
 
 		&::after {
 			content: "";

@@ -1,5 +1,9 @@
 <section class="hero">
-    {% render 'image', image: section.settings.image, class: "hero__image image", sizes: sizes, widths: "374, 400, 600", alt: section.settings.image.alt %}
+    {% if section.settings.image != blank %}
+        {% render 'image', image: section.settings.image, class: "hero__image image", sizes: sizes, widths: "320, 375, 425, 768, 1024, 1440", alt: section.settings.image.alt %}
+    {% else %}
+        {{ 'image' | placeholder_svg_tag }}
+    {% endif %}
     <div class="hero__content content-wrapper">
         <h1 class="hero__headline hero__text">{{ section.settings.headline }} <span class="hero__highlight">{{ section.settings.highlight }}</span></h1>
         <a href="{{ section.settings.button_link }}" class="hero__button button" target="_blank">{{ section.settings.button_label }}</a>

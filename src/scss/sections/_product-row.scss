@@ -7,5 +7,23 @@
 		margin: 0 0 var(--distance-m);
 		font-family: var(--font-family-secondary);
 		text-transform: uppercase;
+
+		@media #{$mq-tablet} {
+			margin-bottom: var(--distance-xl);
+		}
+	}
+
+	&__container {
+		@media #{$mq-tablet} {
+			display: flex;
+			gap: var(--distance-xs);
+			align-items: center;
+			margin-bottom: var(--distance-xl);
+		}
+
+		@media #{$mq-desktop-large} {
+			gap: var(--distance-m);
+			margin-bottom: var(--distance-xl);
+		}
 	}
 }

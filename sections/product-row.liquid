@@ -7,23 +7,23 @@
     {% if section.blocks != blank %}
         <div class="product-row__container">
             {% for block in section.blocks %}
-                <div class="product{% if block.settings.large-product %} product--large {% endif %}">
+                <article class="product{% if block.settings.large-product %} product--large {% endif %}">
                     {% if block.settings.product.featured_image != blank %}
-                        {% render 'image', image: block.settings.product.featured_image, class: "product__image image", sizes: sizes, widths: "374, 400, 600", alt: block.settings.product.featured_image.alt %}
+                        {% render 'image', image: block.settings.product.featured_image, class: "product__image image image--contain", sizes: sizes, widths: "199, 272, 298, 327, 377, 384, 408, 576", alt: block.settings.product.featured_image.alt %}
                     {% else %}
                         {{ 'image' | placeholder_svg_tag }}
                     {% endif %}
-                    <a href="{{ block.settings.product.url }}" class="product__name">{{ block.settings.product.title }}</a>
+                    <a href="{{ block.settings.product.url }}" itemprop="name" class="product__name">{{ block.settings.product.title }}</a>
                     <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        <span class="product__price">{{ block.settings.product.price | money_with_currency }}</span>
+                        <span itemprop="price" class="product__price">{{ block.settings.product.price | money_with_currency }}</span>
                         <meta itemprop="priceCurrency" content="{{ shop.currency }}"/>
                     </div>
-                </div>
+                </article>
             {% endfor %}
         </div>
     {% endif %}
     {% if section.settings.button_link != blank %}
-        <a href="{{ section.settings.button_link }}" class="product-row__button button button--nobg">{{ section.settings.button_label }}{% render 'icon-arrow' %}</a>
+        <a href="{{ section.settings.button_link }}" class="product-row__button button button--transparent">{{ section.settings.button_label }}{% render 'icon-arrow' %}</a>
     {% endif %}
 </section>
 
