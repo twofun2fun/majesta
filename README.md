@@ -1,5 +1,9 @@
 # majesta
 
+## Dawn theme changes
+- newsletter.liquid
+  - various changes, custom classes
+
 ## Custom theme sections
 - hero.liquid
 - product-row.liquid

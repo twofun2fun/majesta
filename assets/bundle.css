@@ -213,6 +213,12 @@ body {
 .hero {
   position: relative;
 }
+@media screen and (min-width: 1440px) {
+  .hero {
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+}
 .hero__image {
   object-fit: cover;
 }
@@ -228,7 +234,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .hero__content {
-    max-width: 41.67%;
+    max-width: 50%;
   }
 }
 @media screen and (min-width: 1440px) {

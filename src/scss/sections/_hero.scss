@@ -1,6 +1,11 @@
 .hero {
 	position: relative;
 
+	@media #{$mq-desktop-large} {
+		margin: 0 auto;
+		max-width: var(--max-width);
+	}
+
 	&__image {
 		object-fit: cover;
 	}
@@ -15,7 +20,7 @@
 		}
 
 		@media #{$mq-desktop} {
-			max-width: 41.67%; //5 of 12 columns
+			max-width: 50%; //6 of 12 columns
 		}
 
 		@media #{$mq-desktop-large} {
