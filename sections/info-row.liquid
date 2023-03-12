@@ -1,13 +1,19 @@
 {% if section.blocks != blank %}
-    <section class="info-row content-wrapper">
+    <section class="info-row content-wrapper section">
         {% for block in section.blocks %}
             <div class="info-row__tile">
-                {% if block.settings.iconCredit %}
-                    {% render 'icon-creditcard' %}
-                    {% elseif block.settings.iconDelivery %}
-                    {% render 'icon-delivery' %}
-                    {% elseif block.settings.iconReturn %}
-                    {% render 'icon-return' %}
+                {% if block.settings.iconPayment %}
+                    {% render 'icon-payment', className: 'info-row__icon' %}
+                {% elsif block.settings.iconDelivery %}
+                    {% render 'icon-delivery', className: 'info-row__icon' %}
+                {% elsif block.settings.iconReturn %}
+                    {% render 'icon-return', className: 'info-row__icon' %}
+                {% endif %}
+                {% if block.settings.headline %}
+                    <h2 class="info-row__headline">{{ block.settings.headline }}</h2>
+                {% endif %}
+                {% if block.settings.subline %}
+                    <h3 class="info-row__subline">{{ block.settings.subline }}</h3>
                 {% endif %}
             </div>
         {% endfor %}
@@ -26,9 +32,9 @@
       "settings": [
         {
           "type": "checkbox",
-          "id": "iconCredit",
-          "label": "Icon - Kreditkarte",
-          "default": true
+          "id": "iconPayment",
+          "label": "Icon - Zahlung",
+          "default": false
         },
         {
           "type": "checkbox",

@@ -7,3 +7,18 @@
 		padding: 0 var(--distance-xxl);
 	}
 }
+
+.section {
+	margin-bottom: var(--distance-m);
+	padding-bottom: var(--distance-m);
+
+	@media #{$mq-desktop} {
+		margin-bottom: var(--distance-l);
+		padding-bottom: var(--distance-l);
+	}
+
+	@media #{$mq-desktop-large} {
+		margin-bottom: var(--distance-xxl);
+		padding-bottom: var(--distance-xxl);
+	}
+}
