@@ -18,7 +18,13 @@
 	}
 
 	@media #{$mq-desktop-large} {
-		margin-bottom: var(--distance-xxl);
-		padding-bottom: var(--distance-xxl);
+		margin-bottom: var(--distance-xl);
+		padding-bottom: var(--distance-xl);
 	}
+}
+
+.text {
+	margin: 0;
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-xs);
 }
