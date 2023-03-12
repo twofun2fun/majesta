@@ -1,81 +1,146 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "f9f09354-3007-4b47-9129-8ffcc09c85f6": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/StagePlaceholder.jpg",
+        "headline": "Entdecken Sie den zeitlosen  Glamour von",
+        "highlight": "MAJESTA",
+        "buttonLink": "shopify:\/\/collections\/all",
+        "buttonLabel": "mehr erfahren"
+      }
+    },
+    "24068967-3b00-40b1-b276-b3439e148e79": {
+      "type": "product-row",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-0": {
+          "type": "product",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "product": "pharaoh-majesta-jewelry",
+            "large-product": false
           }
         },
-        "text": {
-          "type": "text",
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-1": {
+          "type": "product",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "product": "pharaoh-majesta-jewelry",
+            "large-product": true
           }
         },
-        "button": {
-          "type": "buttons",
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-2": {
+          "type": "product",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "product": "pharaoh-majesta-jewelry",
+            "large-product": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-0",
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-1",
+        "template--18096498639160__24068967-3b00-40b1-b276-b3439e148e79-1678658526960f6177-2"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "headline": "Favoriten",
+        "button_label": "Alle Produkte",
+        "button_link": ""
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "d502d968-b9a4-4563-ae76-ab7f26e68a0d": {
+      "type": "info-row",
+      "blocks": {
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-0": {
+          "type": "tile",
+          "settings": {
+            "iconPayment": true,
+            "iconDelivery": false,
+            "iconReturn": false,
+            "headline": "Sicheres Zahlsystem",
+            "subline": "100% über Shopify"
+          }
+        },
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-1": {
+          "type": "tile",
+          "settings": {
+            "iconPayment": false,
+            "iconDelivery": true,
+            "iconReturn": false,
+            "headline": "Gratis Versand",
+            "subline": "ab 40€ Einkaufswert"
+          }
+        },
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-2": {
+          "type": "tile",
+          "settings": {
+            "iconPayment": false,
+            "iconDelivery": false,
+            "iconReturn": true,
+            "headline": "14 Tage Rückgaberecht",
+            "subline": "schnell & einfach"
+          }
+        }
+      },
+      "block_order": [
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-0",
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-1",
+        "template--18096498639160__d502d968-b9a4-4563-ae76-ab7f26e68a0d-16786585582d57ecbc-2"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
+      }
+    },
+    "c1c83741-a19a-4c2f-b9f7-323a2bd1f05d": {
+      "type": "teaser",
+      "settings": {
+        "state": false,
+        "image": "shopify:\/\/shop_images\/TeaserImage.webp",
+        "headline": "Über uns",
+        "copy": "<p>Willkommen bei MAJESTA, Ihrem Online-Ziel für erstklassigen Schmuck. Wir sind stolz darauf, eine breite Auswahl an hochwertigen Ohrringen anzubieten, die jedes Outfit bereichern werden.<\/p><p>Unser Online-Shop bietet Ihnen den Vorteil, Schmuck in einer sicheren und bequemen Umgebung zu kaufen. Wir bieten eine einfache Navigation und eine benutzerfreundliche Oberfläche, die es Ihnen ermöglicht, in kürzester Zeit das perfekte Paar Ohrringe zu finden.<\/p>",
+        "buttonLabel": "mehr erfahren",
+        "buttonLink": "shopify:\/\/pages\/contact"
+      }
+    },
+    "cbe0ce45-b884-4ca0-be17-45d6c4502fa3": {
+      "type": "newsletter",
+      "blocks": {
+        "00bc48b9-99aa-4907-959c-8b5f009512db": {
+          "type": "headline",
+          "settings": {
+            "headline": "Newsletter abonnieren"
+          }
+        },
+        "cea12cb5-8233-423e-b44c-017435108605": {
+          "type": "subline",
+          "settings": {
+            "subline": "15% Willkommensrabatt* erhalten"
+          }
+        },
+        "5b846c99-4bfa-4378-a9df-98af12f38d54": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "49ebdfc7-b89b-4af4-b046-7ae83d401863": {
+          "type": "paragraph",
+          "settings": {
+            "copy": "<p>*Einlösbar ab einem Einkaufswert von 50€. Nicht mit anderen Aktionen\/Rabatten kombinierbar.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "00bc48b9-99aa-4907-959c-8b5f009512db",
+        "cea12cb5-8233-423e-b44c-017435108605",
+        "5b846c99-4bfa-4378-a9df-98af12f38d54",
+        "49ebdfc7-b89b-4af4-b046-7ae83d401863"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "f9f09354-3007-4b47-9129-8ffcc09c85f6",
+    "24068967-3b00-40b1-b276-b3439e148e79",
+    "d502d968-b9a4-4563-ae76-ab7f26e68a0d",
+    "c1c83741-a19a-4c2f-b9f7-323a2bd1f05d",
+    "cbe0ce45-b884-4ca0-be17-45d6c4502fa3"
   ]
 }
