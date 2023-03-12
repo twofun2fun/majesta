@@ -1,6 +1,18 @@
-<section class="info-row content-wrapper">
-
-</section>
+{% if section.blocks != blank %}
+    <section class="info-row content-wrapper">
+        {% for block in section.blocks %}
+            <div class="info-row__tile">
+                {% if block.settings.iconCredit %}
+                    {% render 'icon-creditcard' %}
+                    {% elseif block.settings.iconDelivery %}
+                    {% render 'icon-delivery' %}
+                    {% elseif block.settings.iconReturn %}
+                    {% render 'icon-return' %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </section>
+{% endif %}
 
 {% schema %}
 {
@@ -9,28 +21,26 @@
   "max_blocks": 3,
   "blocks": [
     {
-      "type": "text",
+      "type": "tile",
       "name": "Kachel",
       "settings": [
         {
-          "type": "radio",
-          "id": "icons",
-          "label": "Icon Auswahl",
-          "options": [
-            {
-              "value": "icon-creditcard",
-              "label": "Icon - Kreditkarte"
-            },
-            {
-              "value": "icon-delivery",
-              "label": "Icon - Versand"
-            },
-            {
-              "value": "icon-return",
-              "label": "Icon - Rückgabe"
-            }
-          ],
-          "default": "icon-creditcard"
+          "type": "checkbox",
+          "id": "iconCredit",
+          "label": "Icon - Kreditkarte",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "iconDelivery",
+          "label": "Icon - Versand",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "iconReturn",
+          "label": "Icon - Rückgabe",
+          "default": false
         },
         {
           "type": "text",
@@ -50,13 +60,13 @@
       "name": "Inforeihe",
       "blocks": [
         {
-          "type": "text"
+          "type": "tile"
         },
         {
-          "type": "text"
+          "type": "tile"
         },
         {
-          "type": "text"
+          "type": "tile"
         }
       ]
     }
