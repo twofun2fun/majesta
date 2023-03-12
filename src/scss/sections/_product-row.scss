@@ -3,7 +3,6 @@
 
 	&__headline {
 		margin: 0 0 var(--distance-m);
-		text-transform: uppercase;
 
 		@media #{$mq-tablet} {
 			margin-bottom: var(--distance-xl);

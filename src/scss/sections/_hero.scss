@@ -27,6 +27,7 @@
 		margin: 0 0 var(--distance-s);
 		border: none;
 		font-size: var(--font-size-m);
+		text-transform: none;
 
 		@media #{$mq-tablet} {
 			margin-bottom: var(--distance-m);

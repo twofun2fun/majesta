@@ -1,0 +1,67 @@
+<section class="teaser content-wrapper section">
+    <div class="teaser__container{% if section.settings.state %} teaser__container--reverse{% endif %}">
+        <div class="teaser__content">
+            {% if section.settings.headline %}
+                <h2 class="teaser__headline headline">{{ section.settings.headline }}</h2>
+            {% endif %}
+            {% if section.settings.copy %}
+                <div class="teaser__copy text">{{ section.settings.copy }}</div>
+            {% endif %}
+            {% if section.settings.buttonLink %}
+                <a href="{{ section.settings.buttonLink }}" class="teaser__button button button--transparent">{{ section.settings.buttonLabel }}{% render 'icon-arrow' %}</a>
+            {% endif %}
+        </div>
+        <div class="teaser__image-container">
+            {% if section.settings.image != blank %}
+                {% render 'image', image: section.settings.image, class: "teaser__image image", sizes: sizes, widths: "272, 327, 348, 377, 768, 1024, 1440", alt: section.settings.image.alt %}
+            {% else %}
+                {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Teaser",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "state",
+      "label": "Bild links",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild auswählen"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Überschrift"
+    },
+    {
+      "type": "richtext",
+      "id": "copy",
+      "label": "Fließtext"
+    },
+    {
+      "type": "text",
+      "id": "buttonLabel",
+      "label": "Buttontext"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink",
+      "label": "Button-URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Teaser",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

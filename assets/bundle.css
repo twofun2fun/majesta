@@ -108,10 +108,14 @@ body {
 
 .headline {
   display: inline-block;
+  margin: 0;
   border: 1px solid var(--color-secondary);
-  padding: var(--distance-xs);
   font-family: var(--font-family-secondary);
   font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+}
+.headline--padding {
+  padding: var(--distance-xs);
 }
 
 .image {
@@ -199,6 +203,12 @@ body {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xs);
 }
+.text > p {
+  margin: 0 0 var(--distance-xs);
+}
+.text > p:last-child {
+  margin-bottom: 0;
+}
 
 .hero {
   position: relative;
@@ -230,6 +240,7 @@ body {
   margin: 0 0 var(--distance-s);
   border: none;
   font-size: var(--font-size-m);
+  text-transform: none;
 }
 @media screen and (min-width: 768px) {
   .hero__headline {
@@ -306,7 +317,6 @@ body {
 }
 .product-row__headline {
   margin: 0 0 var(--distance-m);
-  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .product-row__headline {
@@ -325,5 +335,71 @@ body {
   .product-row__container {
     gap: var(--distance-m);
     margin-bottom: var(--distance-xl);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .teaser__container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+}
+.teaser__container--reverse {
+  flex-direction: row-reverse;
+}
+.teaser__container--reverse .teaser__image-container {
+  right: initial;
+  left: 0;
+}
+.teaser__content {
+  padding: var(--distance-xs);
+  background-color: var(--color-secondary);
+}
+@media screen and (min-width: 768px) {
+  .teaser__content {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .teaser__content {
+    padding: var(--distance-m);
+  }
+}
+.teaser__headline {
+  margin-bottom: var(--distance-s);
+  border: none;
+}
+.teaser__copy {
+  margin-bottom: var(--distance-s);
+}
+.teaser__button {
+  border: 0;
+  padding-left: 0;
+}
+.teaser__button:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .teaser__image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    min-height: 100%;
+    width: 50%;
+  }
+}
+.teaser__image {
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .teaser__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
   }
 }

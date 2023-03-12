@@ -1,0 +1,75 @@
+.teaser {
+	$component: &;
+
+	&__container {
+		@media #{$mq-tablet} {
+			position: relative;
+			display: flex;
+			overflow: hidden;
+		}
+
+		&--reverse {
+			flex-direction: row-reverse;
+
+			#{$component}__image-container {
+				right: initial;
+				left: 0;
+			}
+		}
+	}
+
+	&__content {
+		padding: var(--distance-xs);
+		background-color: var(--color-secondary);
+
+		@media #{$mq-tablet} {
+			width: 50%;
+		}
+
+		@media #{$mq-desktop} {
+			padding: var(--distance-m);
+		}
+	}
+
+	&__headline {
+		margin-bottom: var(--distance-s);
+		border: none;
+	}
+
+	&__copy {
+		margin-bottom: var(--distance-s);
+	}
+
+	&__button {
+		border: 0;
+		padding-left: 0;
+
+		&:hover {
+			background-color: transparent;
+			text-decoration: underline;
+		}
+	}
+
+	&__image-container {
+		@media #{$mq-tablet} {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+			min-height: 100%;
+			width: 50%;
+		}
+	}
+
+	&__image {
+		height: auto;
+
+		@media #{$mq-tablet} {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

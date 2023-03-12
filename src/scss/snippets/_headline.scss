@@ -1,7 +1,12 @@
 .headline {
 	display: inline-block;
+	margin: 0;
 	border: 1px solid var(--color-secondary);
-	padding: var(--distance-xs);
 	font-family: var(--font-family-secondary);
 	font-weight: var(--font-weight-black);
+	text-transform: uppercase;
+
+	&--padding {
+		padding: var(--distance-xs);
+	}
 }
