@@ -1,0 +1,47 @@
+<section class="blogpost content-wrapper section">
+    {% if section.settings.blog != blank %}
+        {% for article in section.settings.blog.articles %}
+            {% if forloop.index0 == 0 %}
+                <article class="blogpost__container">
+                    <div class="blogpost__content">
+                        <h2 class="blogpost__headline headline">{{ article.title }}</h2>
+                        <div class="blogpost__date">{{ article.published_at | time_tag: format: 'date' }}</div>
+                        <p class="blogpost__copy text">{{ article.content | strip_html | truncatewords: 50 }}</p>
+                        {% if section.settings.buttonLabel != blank %}
+                            <a href="{{ article.url }}" class="blogpost__button button button--transparent">{{ section.settings.buttonLabel }}{% render 'icon-arrow' %}</a>
+                        {% endif %}
+                    </div>
+                    {% if article.image != blank %}
+                        <div class="blogpost__image-container">
+                            {% render 'image', image: article.image, class: "blogpost__image image", sizes: sizes, widths: "320, 375, 475, 768, 1024, 1440, 1920, 2560, 3200", alt: article.image.alt %}
+                        </div>
+                    {% endif %}
+                </article>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Blogpost",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog auswählen"
+    },
+    {
+      "type": "text",
+      "id": "buttonLabel",
+      "label": "Text - Button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blogpost",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
