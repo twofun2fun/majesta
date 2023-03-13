@@ -42,8 +42,8 @@
       ],
       "settings": {
         "headline": "Favoriten",
-        "button_label": "Alle Produkte",
-        "button_link": ""
+        "buttonLabel": "Alle Produkte",
+        "buttonLink": ""
       }
     },
     "d502d968-b9a4-4563-ae76-ab7f26e68a0d": {
@@ -134,6 +134,41 @@
       ],
       "settings": {
       }
+    },
+    "672c6f5a-75c0-489d-a570-23522424218f": {
+      "type": "double-product",
+      "blocks": {
+        "template--18096498639160__672c6f5a-75c0-489d-a570-23522424218f-1678750473136254fa-0": {
+          "type": "product",
+          "settings": {
+            "product": "pharaoh-majesta-jewelry"
+          }
+        },
+        "template--18096498639160__672c6f5a-75c0-489d-a570-23522424218f-1678750473136254fa-1": {
+          "type": "product",
+          "settings": {
+            "product": "pharaoh-majesta-jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "template--18096498639160__672c6f5a-75c0-489d-a570-23522424218f-1678750473136254fa-0",
+        "template--18096498639160__672c6f5a-75c0-489d-a570-23522424218f-1678750473136254fa-1"
+      ],
+      "settings": {
+        "space-top": true,
+        "image": "shopify:\/\/shop_images\/WavesFinal.webp",
+        "headline": "Neuheiten",
+        "buttonLabel": "Alle Produkte",
+        "buttonLink": "shopify:\/\/collections\/all"
+      }
+    },
+    "7b8d6be5-b158-4ea5-a037-7c0a96d8fe80": {
+      "type": "blogpost",
+      "settings": {
+        "blog": "news",
+        "buttonLabel": "weiterlesen"
+      }
     }
   },
   "order": [
@@ -141,6 +176,8 @@
     "24068967-3b00-40b1-b276-b3439e148e79",
     "d502d968-b9a4-4563-ae76-ab7f26e68a0d",
     "c1c83741-a19a-4c2f-b9f7-323a2bd1f05d",
-    "cbe0ce45-b884-4ca0-be17-45d6c4502fa3"
+    "cbe0ce45-b884-4ca0-be17-45d6c4502fa3",
+    "672c6f5a-75c0-489d-a570-23522424218f",
+    "7b8d6be5-b158-4ea5-a037-7c0a96d8fe80"
   ]
 }
