@@ -554,6 +554,9 @@ body {
     font-size: var(--font-size-s);
   }
 }
+.newsletter__button:focus {
+  outline-color: var(--color-tertiary);
+}
 
 .product-row {
   text-align: center;
@@ -620,6 +623,9 @@ body {
 }
 .teaser__button:hover {
   background-color: transparent;
+  text-decoration: underline;
+}
+.teaser__button:focus {
   text-decoration: underline;
 }
 @media screen and (min-width: 768px) {

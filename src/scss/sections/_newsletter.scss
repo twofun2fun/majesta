@@ -1,6 +1,6 @@
 .newsletter {
 	$component: &;
-	
+
 	padding-top: var(--distance-m);
 	text-align: center;
 	background-color: var(--color-secondary);
@@ -85,6 +85,10 @@
 
 		@media #{$mq-desktop} {
 			font-size: var(--font-size-s);
+		}
+
+		&:focus {
+			outline-color: var(--color-tertiary);
 		}
 	}
 }
