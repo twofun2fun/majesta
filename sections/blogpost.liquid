@@ -13,7 +13,7 @@
                     </div>
                     {% if article.image != blank %}
                         <div class="blogpost__image-container">
-                            {% render 'image', image: article.image, class: "blogpost__image image", sizes: sizes, widths: "320, 375, 475, 768, 1024, 1440, 1920, 2560, 3200", alt: article.image.alt %}
+                            {% render 'image', image: article.image, class: "blogpost__image image", sizes: sizes, widths: "320, 375, 475, 768, 1024, 1440, 1920, 2560, 3200", alt: article.image.alt, loading: 'lazy' %}
                         </div>
                     {% endif %}
                 </article>
