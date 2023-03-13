@@ -1,15 +1,15 @@
-<section class="product-row content-wrapper section">
-    {% if section.settings.headline != blank %}
-        <h2 class="product-row__headline headline headline--padding">
-            {{ section.settings.headline }}
-        </h2>
-    {% endif %}
-    {% if section.blocks != blank %}
-        <div class="product-row__container">
+<section class="double-product{% if section.settings.space-top %} double-product--no-space {% endif %} section">
+    <div class="content-wrapper">
+        {% if section.settings.headline != blank %}
+            <h2 class="double-product__headline headline headline--padding">
+                {{ section.settings.headline }}
+            </h2>
+        {% endif %}
+        <div class="double-product__container">
             {% for block in section.blocks %}
-                <article class="product{% if block.settings.large-product %} product--large {% endif %}">
+                <article class="product">
                     {% if block.settings.product.featured_image != blank %}
-                        {% render 'image', image: block.settings.product.featured_image, class: "product__image image image--contain", sizes: sizes, widths: "199, 272, 298, 327, 377, 384, 408, 576", alt: block.settings.product.featured_image.alt %}
+                        {% render 'image', image: block.settings.product.featured_image, class: "product__image image image--contain", sizes: sizes, widths: "272, 327, 354, 377, 434, 655", alt: block.settings.product.featured_image.alt %}
                     {% else %}
                         {{ 'image' | placeholder_svg_tag }}
                     {% endif %}
@@ -21,16 +21,30 @@
                 </article>
             {% endfor %}
         </div>
-    {% endif %}
-    {% if section.settings.buttonLink != blank %}
-        <a href="{{ section.settings.buttonLink }}" class="product-row__button button button--transparent">{{ section.settings.buttonLabel }}{% render 'icon-arrow' %}</a>
+        {% if section.settings.buttonLink != blank %}
+            <a href="{{ section.settings.buttonLink }}" class="double-product__button button button--white">{{ section.settings.buttonLabel }}{% render 'icon-arrow' %}</a>
+        {% endif %}
+    </div>
+    {% if section.settings.image != blank %}
+        {% render 'image', image: section.settings.image, class: "double-product__image image", sizes: sizes, widths: "320, 375, 475, 768, 1024, 1440, 1920, 2560, 3200", alt: section.settings.image.alt %}
     {% endif %}
 </section>
 
 {% schema %}
 {
-  "name": "Produktreihe",
+  "name": "Doppelprodukt",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "space-top",
+      "label": "Kein Abstand nach oben",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hintergrundbild auswählen"
+    },
     {
       "type": "text",
       "id": "headline",
@@ -49,7 +63,7 @@
       "label": "URL - Button"
     }
   ],
-  "max_blocks": 3,
+  "max_blocks": 2,
   "blocks": [
     {
       "type": "product",
@@ -59,23 +73,14 @@
           "type": "product",
           "id": "product",
           "label": "Produkt auswählen"
-        },
-        {
-          "type": "checkbox",
-          "id": "large-product",
-          "default": false,
-          "label": "Größeres Produkt"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Produktreihe",
+      "name": "Doppelprodukt",
       "blocks": [
-        {
-          "type": "product"
-        },
         {
           "type": "product"
         },

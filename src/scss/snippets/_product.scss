@@ -35,8 +35,13 @@
 	}
 
 	&__name {
+		text-transform: uppercase;
 		text-decoration: none;
-		color: var(--color-primary);
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&:focus-visible {
 			outline: none;
@@ -50,6 +55,16 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
+		}
+	}
+
+	&__name, &__price {
+		font-family: var(--font-family-secondary);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-primary);
+
+		@media #{$mq-desktop} {
+			font-size: var(--font-size-s);
 		}
 	}
 }

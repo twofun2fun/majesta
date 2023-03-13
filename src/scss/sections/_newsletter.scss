@@ -1,6 +1,6 @@
 .newsletter {
 	$component: &;
-
+	
 	padding-top: var(--distance-m);
 	text-align: center;
 	background-color: var(--color-secondary);
@@ -73,6 +73,7 @@
 		border-radius: var(--border-radius);
 
 		&:focus, &:focus-visible {
+			margin-bottom: var(--distance-s);
 			border-radius: var(--border-radius);
 			box-shadow: none;
 		}

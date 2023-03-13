@@ -14,12 +14,10 @@
 			display: flex;
 			gap: var(--distance-xs);
 			align-items: center;
-			margin-bottom: var(--distance-xl);
 		}
 
 		@media #{$mq-desktop-large} {
 			gap: var(--distance-m);
-			margin-bottom: var(--distance-xl);
 		}
 	}
 }
