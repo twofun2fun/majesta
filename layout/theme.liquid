@@ -223,8 +223,11 @@
     <noscript>
         <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
     </noscript>
-    {{ 'bundle.css' | asset_url | stylesheet_tag }}
-
+    <link rel="preload" href="{{ 'bundle.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ 'bundle.css' | asset_url }}">
+    </noscript>
+    
     {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
