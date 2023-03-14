@@ -219,9 +219,9 @@
         }
     {% endstyle %}
 
-    <link rel="preload" href="./assets/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="./assets/base.css">
+        <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
     </noscript>
     {{ 'bundle.css' | asset_url | stylesheet_tag }}
 
